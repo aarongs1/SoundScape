@@ -1,0 +1,305 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>writer.py &mdash; 21M.385 Common Library  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="wavesrc.py" href="wavesrc.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> 21M.385 Common Library
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="audio.html">audio.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="clock.html">clock.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="core.html">core.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gfxutil.html">gfxutil.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="keydisplay.html">keydisplay.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="leap.html">leap.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metro.html">metro.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mixer.html">mixer.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modifier.html">modifier.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="note.html">note.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="noteseq.html">noteseq.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screen.html">screen.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="synth.html">synth.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wavegen.html">wavegen.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wavesrc.html">wavesrc.py</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">writer.py</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">21M.385 Common Library</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>writer.py</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-common.writer">
+<span id="writer-py"></span><h1>writer.py<a class="headerlink" href="#module-common.writer" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="common.writer.AudioWriter">
+<em class="property">class </em><code class="sig-prename descclassname">common.writer.</code><code class="sig-name descname">AudioWriter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">filebase</span></em>, <em class="sig-param"><span class="n">num_channels</span><span class="o">=</span><span class="default_value">1</span></em><span class="sig-paren">)</span><a class="headerlink" href="#common.writer.AudioWriter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Class for recording audio data. To use, create an AudioWriter, and pass its method
+<a class="reference internal" href="#common.writer.AudioWriter.add_audio" title="common.writer.AudioWriter.add_audio"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_audio()</span></code></a> into Audio’s <cite>listen_func</cite>. See <a class="reference internal" href="audio.html#common.audio.Audio" title="common.audio.Audio"><code class="xref py py-class docutils literal notranslate"><span class="pre">common.audio.Audio</span></code></a>.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>filebase</strong> – The name of the file to output (without the extension). File extension
+is added automatically.</p></li>
+<li><p><strong>num_channels</strong> – When writing the wave file, write with this many channels</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="common.writer.AudioWriter.add_audio">
+<code class="sig-name descname">add_audio</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">num_channels</span></em><span class="sig-paren">)</span><a class="headerlink" href="#common.writer.AudioWriter.add_audio" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to add more audio into AudioWriter’s internal buffer.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>data</strong> – the frames of audio data.</p></li>
+<li><p><strong>num_channels</strong> – number of channels of interleaved audio data in <cite>data</cite>.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="common.writer.AudioWriter.start">
+<code class="sig-name descname">start</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#common.writer.AudioWriter.start" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts recording audio frames, by accepting data from <a class="reference internal" href="#common.writer.AudioWriter.add_audio" title="common.writer.AudioWriter.add_audio"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_audio()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="common.writer.AudioWriter.stop">
+<code class="sig-name descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#common.writer.AudioWriter.stop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops recording audio frames by ignoring any calls to <a class="reference internal" href="#common.writer.AudioWriter.add_audio" title="common.writer.AudioWriter.add_audio"><code class="xref py py-meth docutils literal notranslate"><span class="pre">add_audio()</span></code></a>.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="common.writer.AudioWriter.toggle">
+<code class="sig-name descname">toggle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#common.writer.AudioWriter.toggle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Toggles between calling <cite>start()</cite> and <cite>stop()</cite></p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="common.writer.combine_buffers">
+<code class="sig-prename descclassname">common.writer.</code><code class="sig-name descname">combine_buffers</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">buffers</span></em><span class="sig-paren">)</span><a class="headerlink" href="#common.writer.combine_buffers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Concatenates a list of numpy arrays into a single numpy array</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>buffers</strong> – A list of numpy arrays</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A concatenated numpy float array with length being the sum of lengths of 
+arrays in input buffers.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt id="common.writer.convert_channels">
+<code class="sig-prename descclassname">common.writer.</code><code class="sig-name descname">convert_channels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">in_channels</span></em>, <em class="sig-param"><span class="n">out_channels</span></em><span class="sig-paren">)</span><a class="headerlink" href="#common.writer.convert_channels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert an audio data buffer of a given number of channels to a different number of channels.
+Currently only handles going from mono to multi-channel, or from multi-channel to mono.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt id="common.writer.write_wave_file">
+<code class="sig-prename descclassname">common.writer.</code><code class="sig-name descname">write_wave_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">buf</span></em>, <em class="sig-param"><span class="n">num_channels</span></em>, <em class="sig-param"><span class="n">filename</span></em><span class="sig-paren">)</span><a class="headerlink" href="#common.writer.write_wave_file" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write a Wave File</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>buf</strong> – Buffer of audio data as an interleaved numpy float array, assuming a range of [-1, 1]</p></li>
+<li><p><strong>num_channels</strong> – Number of channels in <cite>buf</cite></p></li>
+<li><p><strong>filename</strong> – Name of output file to write</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="wavesrc.html" class="btn btn-neutral float-left" title="wavesrc.py" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Eran Egozy.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

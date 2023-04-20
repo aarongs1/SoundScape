@@ -1,0 +1,360 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>wavegen.py &mdash; 21M.385 Common Library  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="wavesrc.py" href="wavesrc.html" />
+    <link rel="prev" title="synth.py" href="synth.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> 21M.385 Common Library
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="audio.html">audio.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="clock.html">clock.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="core.html">core.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gfxutil.html">gfxutil.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="keydisplay.html">keydisplay.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="leap.html">leap.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="metro.html">metro.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mixer.html">mixer.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="modifier.html">modifier.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="note.html">note.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="noteseq.html">noteseq.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="screen.html">screen.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="synth.html">synth.py</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">wavegen.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wavesrc.html">wavesrc.py</a></li>
+<li class="toctree-l1"><a class="reference internal" href="writer.html">writer.py</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">21M.385 Common Library</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>wavegen.py</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-common.wavegen">
+<span id="wavegen-py"></span><h1>wavegen.py<a class="headerlink" href="#module-common.wavegen" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="common.wavegen.SpeedModulator">
+<em class="property">class </em><code class="sig-prename descclassname">common.wavegen.</code><code class="sig-name descname">SpeedModulator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">generator</span></em>, <em class="sig-param"><span class="n">speed</span><span class="o">=</span><span class="default_value">1.0</span></em><span class="sig-paren">)</span><a class="headerlink" href="#common.wavegen.SpeedModulator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Modulates the speed of generated data from a source.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>generator</strong> – The generator object. Must define the method 
+<code class="docutils literal notranslate"><span class="pre">generate(num_frames,</span> <span class="pre">num_channels)</span></code>, which returns a tuple
+<code class="docutils literal notranslate"><span class="pre">(signal,</span> <span class="pre">continue_flag)</span></code>.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="common.wavegen.SpeedModulator.generate">
+<code class="sig-name descname">generate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">num_frames</span></em>, <em class="sig-param"><span class="n">num_channels</span></em><span class="sig-paren">)</span><a class="headerlink" href="#common.wavegen.SpeedModulator.generate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates output of modulated speed by resampling audio data according
+to the specified speed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_frames</strong> – An integer number of frames to generate.</p></li>
+<li><p><strong>num_channels</strong> – Number of channels. Can be 1 (mono) or 2 (stereo)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A tuple <code class="docutils literal notranslate"><span class="pre">(output,</span> <span class="pre">True)</span></code>. The output is the audio data from
+wave source, a numpy array of size num_frames * num_channels.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="common.wavegen.SpeedModulator.set_speed">
+<code class="sig-name descname">set_speed</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">speed</span></em><span class="sig-paren">)</span><a class="headerlink" href="#common.wavegen.SpeedModulator.set_speed" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the factor by which the speed should be modulated. For example, a speed
+of 1.0 is the original speed, 2.0 is twice as fast, 0.5 is twice as slow.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>speed</strong> – The desired speed, a float.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="common.wavegen.WaveGenerator">
+<em class="property">class </em><code class="sig-prename descclassname">common.wavegen.</code><code class="sig-name descname">WaveGenerator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">wave_source</span></em>, <em class="sig-param"><span class="n">loop</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="headerlink" href="#common.wavegen.WaveGenerator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates audio data by asking an audio-source (eg, WaveFile) for that data.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>wave_source</strong> – The source of data. Must define <code class="docutils literal notranslate"><span class="pre">get_frames(start_frame,</span> <span class="pre">end_frame)</span></code>,
+which returns a numpy array.</p></li>
+<li><p><strong>loop</strong> – When <em>True</em>, continuously restarts playback from beginning of wave source.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="common.wavegen.WaveGenerator.generate">
+<code class="sig-name descname">generate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">num_frames</span></em>, <em class="sig-param"><span class="n">num_channels</span></em><span class="sig-paren">)</span><a class="headerlink" href="#common.wavegen.WaveGenerator.generate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates output from the wave source. When paused, only zeros are
+generated. When looping, if the end of the buffer is reached, more
+data will be read from the beginning.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>num_frames</strong> – An integer number of frames to generate.</p></li>
+<li><p><strong>num_channels</strong> – Number of channels. Can be 1 (mono) or 2 (stereo)</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A tuple <code class="docutils literal notranslate"><span class="pre">(output,</span> <span class="pre">True)</span></code>. The output is the audio data from
+wave source, a numpy array of size num_frames * num_channels.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="common.wavegen.WaveGenerator.get_gain">
+<code class="sig-name descname">get_gain</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#common.wavegen.WaveGenerator.get_gain" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The volume/gain of the generator, a float between 0 and 1.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="common.wavegen.WaveGenerator.pause">
+<code class="sig-name descname">pause</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#common.wavegen.WaveGenerator.pause" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pauses audio generation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="common.wavegen.WaveGenerator.play">
+<code class="sig-name descname">play</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#common.wavegen.WaveGenerator.play" title="Permalink to this definition">¶</a></dt>
+<dd><p>Starts audio generation from the last frame it played.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="common.wavegen.WaveGenerator.play_toggle">
+<code class="sig-name descname">play_toggle</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#common.wavegen.WaveGenerator.play_toggle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Toggles play and pause.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="common.wavegen.WaveGenerator.release">
+<code class="sig-name descname">release</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#common.wavegen.WaveGenerator.release" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops any further audio generation.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="common.wavegen.WaveGenerator.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#common.wavegen.WaveGenerator.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Restarts playback from frame 0.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="common.wavegen.WaveGenerator.set_gain">
+<code class="sig-name descname">set_gain</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">g</span></em><span class="sig-paren">)</span><a class="headerlink" href="#common.wavegen.WaveGenerator.set_gain" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets volume/gain value for audio output.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>g</strong> – A float specifying gain. Will be clipped between 0 and 1,
+where 1 is full volume.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="common.wavegen.convert_channels">
+<code class="sig-prename descclassname">common.wavegen.</code><code class="sig-name descname">convert_channels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">in_channels</span></em>, <em class="sig-param"><span class="n">out_channels</span></em><span class="sig-paren">)</span><a class="headerlink" href="#common.wavegen.convert_channels" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert an audio data buffer of a given number of channels to a different number of channels.
+Currently only handles going from mono to multi-channel, or from multi-channel to mono.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="wavesrc.html" class="btn btn-neutral float-right" title="wavesrc.py" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="synth.html" class="btn btn-neutral float-left" title="synth.py" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, Eran Egozy.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
